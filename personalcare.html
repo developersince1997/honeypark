@@ -1,0 +1,160 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<title>Product Order Form Flat Responsive widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Product Order Form Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- fonts  -->
+<link href="//fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
+<!-- /fonts -->
+<!-- css -->
+<link href="css/style1.css" rel='stylesheet' type='text/css' media="all" /> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- /css -->
+</head>
+<body>
+<h1 class="header-agileits w3layouts w3 w3l w3ls">Product Order Form</h1>
+<div class="content-w3ls agileits agileinfo wthree">
+	<form id="submit-form" action="">
+		<div class="form-wthree1 agileits agileinfo wthree">
+		
+			<div class="form-control"> 
+				<label class="header">First Name <span>:</span></label>
+				<input type="text" id="firstname" name="Customer name" placeholder="Your First Name" title="Please enter your First Name" required="">
+			</div>
+			
+			<div class="form-control">	
+				<label class="header">Email Address <span>:</span></label>
+				<input type="email" id="email" name="email" placeholder="Mail@example.com" title="Please enter a Valid Email Address" required="">
+			</div>
+			
+			<div class="form-control">	
+				<label class="header">Phone Number <span>:</span></label>	
+				<!-- <input type="tel" id="countrycode" name="countrycode" placeholder="+??" title="Please enter Your Phone Number" maxlength="4" required=""> -->
+				<!-- <input type="tel" id="PhoneNumber" name="PhoneNumber" placeholder="????????" title="Please enter Your Phone Number" required=""> -->
+				<input type="text" id="firstname" name="PhoneNumber" placeholder="Your Phone Number" title="Please enter your Phone Number" required="">
+			</div>
+		
+		</div>
+		
+		<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
+			
+			<!-- <div class="form-control"> 
+				<label class="header">Last Name <span>:</span></label>
+				<input type="text" id="lastname" name="lastname" placeholder="Your Last Name" title="Please enter your Last Name" required="">
+			</div> -->
+		
+		</div>
+		<div class="clear"></div>
+		
+		<div class="form-control1"> 
+			<label class="header">Billing Address <span>:</span></label>
+			<input type="text" id="address" name="Billing Address" placeholder="Billing Address" title="Please enter Billing Address" required="">
+		</div>
+			
+		<div class="form-control2"> 
+			<label class="header">Your Address <span>:</span></label>
+			<input type="text" id="address2" name="customer Address" placeholder="Your Address" title="Please enter Your Address" required="">
+		</div>
+		
+		<div class="form-wthree3 w3-agileits agileits-w3layouts agile">
+			<div class="form-control"> 
+				<label class="header">City <span>:</span></label>
+				<input type="text" id="city" name="city" placeholder="Your City" title="Please enter your City" required="">
+			</div>
+		
+			<div class="form-control"> 
+				<label class="header">Product Name <span>:</span></label>
+				<select id="productnameslisted" name="Productname" onChange="productlist()">
+					<option value="select Product" selected>select product</option>
+					<option value="Nilumbur Honey">Nilumbur Honey</option>
+					<option value="Indian Honey">Indian Honey</option>
+					<option value="Royal Bee Honey">Royal Bee Honey</option>
+					<option value="Wildflower Honey">Wildflower Honey</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="form-wthree4 w3-agile w3-agileits agileits-w3layouts">
+			<div class="form-control"> 
+				<label class="header">State/Province <span>:</span></label>
+				<input type="text" id="state" name="state" placeholder="Your State or Province" title="Please enter your State Or Province" required="">
+			</div>
+		
+			<div class="form-control">
+				<label class="header">Quantity <span>:</span></label>
+				<select id="Country1" name="Quantity" onChange="update()">
+					<option value="Country" selected>select Quantity</option>
+					<option value="1kg">1kg</option>
+					<option value="500gm">500gm</option>
+					<option value="200gm">200gm</option>
+					<option value="100gm">100gm</option>
+					<option value="50gm">50gm</option>
+					<option value="25gm">25gm</option>
+				</select>
+			</div>
+		</div>
+		<div class="clear"></div>
+		
+		<div class="form-control last">
+			<input type="submit" class="register" value="Submit">
+			<input type="reset" class="reset" value="Reset">
+			<div class="clear"></div>
+		</div>	
+	</form>
+</div>
+<script>
+	$("#submit-form").submit((e)=>{
+		e.preventDefault()
+		$.ajax({
+			url:"https://script.google.com/macros/s/AKfycbzjxHeVq4qS1kkJAcSGNslHUn2b0OTnpmt6-uCf0oHKg9OTLzct1GaL9OLbLPYamoII1w/exec",
+			data:$("#submit-form").serialize(),
+			method:"post",
+			success:function (response){
+				alert("your order placed successfully...Our customer executive will contact you within 24 hours")
+				window.location.reload()
+				//window.location.href="https://google.com"
+			},
+			error:function (err){
+				alert("Something Error")
+
+			}
+		})
+	})
+</script>
+<script type="text/javascript">
+	function update() {
+		var select = document.getElementById('Country1');
+		var option = select.options[select.selectedIndex];
+
+		document.getElementById('value').value = option.value;
+		document.getElementById('text').value = option.text;
+	}
+
+	update();
+</script>
+<script type="text/javascript">
+	function productlist() {
+		var select = document.getElementById('Productname');
+		var option = select.options[select.selectedIndex];
+
+		document.getElementById('value').value = option.value;
+		document.getElementById('text').value = option.text;
+	}
+
+	productlist();
+</script>
+<p class="copyright w3layouts w3 w3l w3ls">© 2017 Product Order Form. All Rights Reserved | Design by <a href="" target="_blank"></a></p>
+
+</body>
+
+</html>
